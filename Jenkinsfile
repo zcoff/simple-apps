@@ -41,5 +41,11 @@ pipeline {
                 '''
             }
         }
+        stage('Backup Image to dockerhub') {
+            steps {
+                sh '''
+                docker compose push'''
+            }
+        }
     }
 }
